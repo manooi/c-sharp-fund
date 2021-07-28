@@ -3,7 +3,7 @@ using System;
 
 namespace GradeBook
 {
-  class Book
+  public class Book
   {
     public Book(string name)
     {
@@ -16,29 +16,28 @@ namespace GradeBook
       grades.Add(grade);
     }
 
-    public void ShowStats()
+    public Statistics GetStatistics()
     {
-      var min = grades[0];
-      var max = grades[0];
-      var avg = 0.0;
+      var result = new Statistics();
+      result.Average = 0.0;
+      result.High = grades[0];
+      result.Low = grades[0];
 
       foreach (var grade in grades)
       {
-        if (grade < min)
+        if (grade < result.Low)
         {
-          min = grade;
+          result.Low = grade;
         }
 
-        if (grade > max)
+        if (grade > result.High)
         {
-          max = grade;
+          result.High = grade;
         }
-        avg += grade;
+        result.Average += grade;
       }
-
-      avg = avg / grades.Count;
-      Console.WriteLine($"High: {max}, Low: {min}, Avg: {avg}");
-
+      result.Average = result.Average / grades.Count;
+      return result;
     }
 
     private List<double> grades;

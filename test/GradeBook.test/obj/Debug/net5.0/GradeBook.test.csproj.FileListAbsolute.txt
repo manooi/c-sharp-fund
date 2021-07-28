@@ -98,3 +98,10 @@ C:\Users\siraw\Desktop\LEARN\pluralsight\c# fund\gradebook\test\GradeBook.test\o
 C:\Users\siraw\Desktop\LEARN\pluralsight\c# fund\gradebook\test\GradeBook.test\obj\Debug\net5.0\ref\GradeBook.test.dll
 C:\Users\siraw\Desktop\LEARN\pluralsight\c# fund\gradebook\test\GradeBook.test\obj\Debug\net5.0\GradeBook.test.pdb
 C:\Users\siraw\Desktop\LEARN\pluralsight\c# fund\gradebook\test\GradeBook.test\obj\Debug\net5.0\GradeBook.test.genruntimeconfig.cache
+C:\Users\siraw\Desktop\LEARN\pluralsight\c# fund\gradebook\test\GradeBook.Test\bin\Debug\net5.0\CoverletSourceRootsMapping
+C:\Users\siraw\Desktop\LEARN\pluralsight\c# fund\gradebook\test\GradeBook.Test\bin\Debug\net5.0\GradeBook.deps.json
+C:\Users\siraw\Desktop\LEARN\pluralsight\c# fund\gradebook\test\GradeBook.Test\bin\Debug\net5.0\GradeBook.runtimeconfig.json
+C:\Users\siraw\Desktop\LEARN\pluralsight\c# fund\gradebook\test\GradeBook.Test\bin\Debug\net5.0\GradeBook.runtimeconfig.dev.json
+C:\Users\siraw\Desktop\LEARN\pluralsight\c# fund\gradebook\test\GradeBook.Test\bin\Debug\net5.0\GradeBook.exe
+C:\Users\siraw\Desktop\LEARN\pluralsight\c# fund\gradebook\test\GradeBook.Test\bin\Debug\net5.0\GradeBook.dll
+C:\Users\siraw\Desktop\LEARN\pluralsight\c# fund\gradebook\test\GradeBook.Test\bin\Debug\net5.0\GradeBook.pdb

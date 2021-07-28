@@ -1,7 +1,8 @@
 using System;
 using Xunit;
 
-namespace GradeBook.test
+namespace GradeBook.Test
+// ถ้าไม่ได้อยู่ใน GrandeBook จะต้อง using ด้วย
 {
   public class BookTests
   {
@@ -9,16 +10,21 @@ namespace GradeBook.test
     public void Test1()
     {
 
-      // arraange
-      var x = 5;
-      var y = 2;
-      var expected = 7;
+      // arrange
+      var book = new Book("");
+      book.AddGrade(90.0);
+      book.AddGrade(85.0);
+      book.AddGrade(70.0);
 
       // act
-      var actual = x + y;
+      var result = book.GetStatistics();
 
       // assert
-      Assert.Equal(expected, actual);
+      Assert.Equal(90.0, result.High);
+      Assert.Equal(81.66, result.Average, 1);
+      Assert.Equal(70.0, result.Low);
+
+
     }
   }
 }

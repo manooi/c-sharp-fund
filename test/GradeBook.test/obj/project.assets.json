@@ -1670,6 +1670,16 @@
         "build": {
           "build/netcoreapp2.1/xunit.runner.visualstudio.props": {}
         }
+      },
+      "GradeBook/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/GradeBook.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GradeBook.dll": {}
+        }
       }
     }
   },
@@ -5906,10 +5916,16 @@
         "xunit.runner.visualstudio.2.4.3.nupkg.sha512",
         "xunit.runner.visualstudio.nuspec"
       ]
+    },
+    "GradeBook/1.0.0": {
+      "type": "project",
+      "path": "../../src/GradeBook/GradeBook.csproj",
+      "msbuildProject": "../../src/GradeBook/GradeBook.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "GradeBook >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 16.9.4",
       "coverlet.collector >= 3.0.2",
       "xunit >= 2.4.1",
@@ -5922,11 +5938,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\siraw\\Desktop\\LEARN\\pluralsight\\c# fund\\gradebook\\test\\GradeBook.test\\GradeBook.test.csproj",
+      "projectUniqueName": "C:\\Users\\siraw\\Desktop\\LEARN\\pluralsight\\c# fund\\gradebook\\test\\GradeBook.Test\\GradeBook.test.csproj",
       "projectName": "GradeBook.test",
-      "projectPath": "C:\\Users\\siraw\\Desktop\\LEARN\\pluralsight\\c# fund\\gradebook\\test\\GradeBook.test\\GradeBook.test.csproj",
+      "projectPath": "C:\\Users\\siraw\\Desktop\\LEARN\\pluralsight\\c# fund\\gradebook\\test\\GradeBook.Test\\GradeBook.test.csproj",
       "packagesPath": "C:\\Users\\siraw\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\siraw\\Desktop\\LEARN\\pluralsight\\c# fund\\gradebook\\test\\GradeBook.test\\obj\\",
+      "outputPath": "C:\\Users\\siraw\\Desktop\\LEARN\\pluralsight\\c# fund\\gradebook\\test\\GradeBook.Test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\siraw\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5942,7 +5958,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\siraw\\Desktop\\LEARN\\pluralsight\\c# fund\\gradebook\\src\\GradeBook\\GradeBook.csproj": {
+              "projectPath": "C:\\Users\\siraw\\Desktop\\LEARN\\pluralsight\\c# fund\\gradebook\\src\\GradeBook\\GradeBook.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
