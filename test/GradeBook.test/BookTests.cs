@@ -4,14 +4,20 @@ using Xunit;
 namespace GradeBook.Test
 // ถ้าไม่ได้อยู่ใน GrandeBook จะต้อง using ด้วย
 {
+
+
+
  public class BookTests
  {
+
+
+
   [Fact]
   public void BookCalculatesAnAverageGrades()
   {
 
    // arrange
-   var book = new Book("");
+   var book = new Book("Sirawit");
 
    book.AddGrade(90.0);
    book.AddGrade(85.0);

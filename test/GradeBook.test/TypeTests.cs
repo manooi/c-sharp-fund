@@ -4,8 +4,44 @@ using Xunit;
 namespace GradeBook.Test
 // ถ้าไม่ได้อยู่ใน GrandeBook จะต้อง using ด้วย
 {
+
+ public delegate string WriteLogDelegate(string logMessage);
  public class TypeTests
  {
+
+  int count = 0;
+
+  [Fact]
+  public void WriteLogDelegateCanPoinToMethod()
+  {
+   WriteLogDelegate log = ReturnMessage;
+
+   //Point to any method that returns string and take a string.
+   // Must satisfy the delegate type!
+   //1st way - long hand notation
+   // log = new WriteLogDelegate(ReturnMessage);
+
+   //2nd way - shorter
+   log += ReturnMessage;
+   log += IncrementCount;
+   // invoked ReturnMessage x 2 and IncrementCount x1
+   var result = log("Hello!");
+   Assert.Equal(3, count);
+   Assert.Equal("hello!", result);
+
+  }
+
+  string IncrementCount(string message)
+  {
+   count++;
+   return message.ToLower();
+  }
+
+  string ReturnMessage(string message)
+  {
+   count++;
+   return message;
+  }
 
   [Fact]
   public void StringsBehaveLikeValueType()
@@ -67,7 +103,7 @@ namespace GradeBook.Test
   private void GetBookSetName(Book book, string name)
   {
    book = new Book(name);
-   // book.Name = name;
+   book.Name = name;
   }
 
   [Fact]
@@ -82,7 +118,7 @@ namespace GradeBook.Test
 
   private void SetName(Book book, string name)
   {
-   // book.Name = name;
+   book.Name = name;
   }
 
   [Fact]

@@ -100,7 +100,7 @@ namespace GradeBook
    {
     return name;
    }
-   private set
+   set
    {
     if (!String.IsNullOrEmpty(value))
     {
@@ -114,7 +114,7 @@ namespace GradeBook
   }
 
   readonly string category = "Science";
-  public const string MYCONST = "MAHANIN";
+  public const string MYCONST = "MAHANIN"; // treat like static member
 
  }
 }
