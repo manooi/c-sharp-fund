@@ -3,6 +3,8 @@ using System;
 
 namespace GradeBook
 {
+
+ public delegate void GradeAddedDelegate(object sender, EventArgs args);
  public class Book
  {
   public Book(string name)
@@ -39,6 +41,13 @@ namespace GradeBook
    if (grade <= 100 && grade >= 0)
    {
     grades.Add(grade);
+    if (GradeAdded != null)
+    // at least one is listening
+    {
+     // rasing event = invoking delegate
+     GradeAdded(this, new EventArgs());
+
+    }
    }
    else
    {
@@ -46,6 +55,10 @@ namespace GradeBook
     // Console.WriteLine("Invalid value");
    }
   }
+
+  // jsut a field on the Book class
+  // so one can invoke book.GradeAdded
+  public event GradeAddedDelegate GradeAdded;
 
   public Statistics GetStatistics()
   {
