@@ -7,7 +7,7 @@ namespace GradeBook
  {
   static void Main(string[] args)
   {
-   var book = new Book("Wit");
+   var book = new Book("Sirawit");
 
    while (true)
    {
@@ -35,7 +35,7 @@ namespace GradeBook
     }
     finally
     {
-     // Close file, close connection, clean-up
+     // Close file, close connection, clean-up, etc.
     }
    }
 
@@ -44,6 +44,9 @@ namespace GradeBook
    //  book.AddGrade(75.0);
    //  book.AddGrade(70.0);
    var result = book.GetStatistics();
+
+   Console.WriteLine(Book.MYCONST);
+   Console.WriteLine($"For the book name {book.Name}");
    Console.WriteLine($"Average is {result.Average:N2}");
    Console.WriteLine($"High is {result.High:N2}");
    Console.WriteLine($"Low is {result.Low:N2}");

@@ -9,9 +9,10 @@ namespace GradeBook
   {
    grades = new List<double>();
    Name = name;
+   category = "";
   }
 
-  public void AddLetterGrade(char letter)
+  public void AddGrade(char letter)
   {
    switch (letter)
    {
@@ -90,7 +91,30 @@ namespace GradeBook
   }
 
   public List<double> grades;
-  public string Name; // public always uppercase
+  // public string Name; // public always uppercase
+  private string name;
+
+  public string Name
+  {
+   get
+   {
+    return name;
+   }
+   private set
+   {
+    if (!String.IsNullOrEmpty(value))
+    {
+     name = value;
+    }
+    else
+    {
+     throw new Exception("Invalid Name.");
+    }
+   }
+  }
+
+  readonly string category = "Science";
+  public const string MYCONST = "MAHANIN";
 
  }
 }

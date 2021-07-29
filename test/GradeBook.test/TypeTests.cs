@@ -67,7 +67,7 @@ namespace GradeBook.Test
   private void GetBookSetName(Book book, string name)
   {
    book = new Book(name);
-   book.Name = name;
+   // book.Name = name;
   }
 
   [Fact]
@@ -82,7 +82,7 @@ namespace GradeBook.Test
 
   private void SetName(Book book, string name)
   {
-   book.Name = name;
+   // book.Name = name;
   }
 
   [Fact]
