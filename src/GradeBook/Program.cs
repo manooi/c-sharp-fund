@@ -7,11 +7,33 @@ namespace GradeBook
  {
   static void Main(string[] args)
   {
-   var book = new Book("Sirawit");
-   book.GradeAdded += OnGradeAdded;
-   book.GradeAdded += OnGradeAdded;
-   book.GradeAdded += OnGradeAdded;
+   // var book = new InMemmoryBook("Sirawit");
+   // book.GradeAdded += OnGradeAdded;
 
+   // EnterGrades(book);
+
+   // var stats = book.GetStatistics();
+   // Console.WriteLine($"For the book name {book.Name}");
+   // Console.WriteLine($"Average is {stats.Average:N2}");
+   // Console.WriteLine($"High is {stats.High:N2}");
+   // Console.WriteLine($"Low is {stats.Low:N2}");
+   // Console.WriteLine($"Letter is {stats.Letter:N2}");
+
+   var diskBook = new DiskBook("DiskBook");
+   diskBook.GradeAdded += OnGradeAdded;
+   diskBook.AddGrade(90);
+   diskBook.AddGrade(85);
+   diskBook.AddGrade(70);
+   var stats = diskBook.GetStatistics();
+   Console.WriteLine($"For the book name {diskBook.Name}");
+   Console.WriteLine($"Average is {stats.Average:N2}");
+   Console.WriteLine($"High is {stats.High:N2}");
+   Console.WriteLine($"Low is {stats.Low:N2}");
+   Console.WriteLine($"Letter is {stats.Letter:N2}");
+  }
+
+  private static void EnterGrades(IBook book)
+  {
    while (true)
    {
     Console.WriteLine("Enter grade or press 'q' to exit");
@@ -41,26 +63,11 @@ namespace GradeBook
      // Close file, close connection, clean-up, etc.
     }
    }
-
-   //  book.AddGrade(85.0);
-   //  book.AddGrade(95.0);
-   //  book.AddGrade(75.0);
-   //  book.AddGrade(70.0);
-   var result = book.GetStatistics();
-
-   Console.WriteLine(Book.MYCONST);
-   Console.WriteLine($"For the book name {book.Name}");
-   Console.WriteLine($"Average is {result.Average:N2}");
-   Console.WriteLine($"High is {result.High:N2}");
-   Console.WriteLine($"Low is {result.Low:N2}");
-   Console.WriteLine($"Letter is {result.Letter:N2}");
-
   }
 
   static void OnGradeAdded(object sender, EventArgs e)
   {
    Console.WriteLine("A grade was added");
-
   }
 
  }

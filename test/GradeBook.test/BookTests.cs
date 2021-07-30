@@ -17,7 +17,7 @@ namespace GradeBook.Test
   {
 
    // arrange
-   var book = new Book("Sirawit");
+   var book = new InMemmoryBook("Sirawit");
 
    book.AddGrade(90.0);
    book.AddGrade(85.0);
@@ -36,7 +36,7 @@ namespace GradeBook.Test
   [Fact]
   public void TestAddGrade()
   {
-   var book = new Book("Grade Book");
+   var book = new InMemmoryBook("Grade Book");
    book.AddGrade(100);
    Assert.Equal(100, book.grades[0]);
   }
