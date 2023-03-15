@@ -7,38 +7,38 @@ namespace GradeBook.Test
 
 
 
- public class BookTests
- {
+    public class BookTests
+    {
 
 
 
-  [Fact]
-  public void BookCalculatesAnAverageGrades()
-  {
+        [Fact]
+        public void BookCalculatesAnAverageGrades()
+        {
 
-   // arrange
-   var book = new InMemmoryBook("Sirawit");
+            // arrange
+            var book = new InMemmoryBook("Sirawit");
 
-   book.AddGrade(90.0);
-   book.AddGrade(85.0);
-   book.AddGrade(70.0);
+            book.AddGrade(90.0);
+            book.AddGrade(85.0);
+            book.AddGrade(70.0);
 
-   // act
-   var result = book.GetStatistics();
+            // act
+            var result = book.GetStatistics();
 
-   // assert
-   Assert.Equal(90.0, result.High);
-   Assert.Equal(81.66, result.Average, 1);
-   Assert.Equal(70.0, result.Low);
-   Assert.Equal('B', result.Letter);
-  }
+            // assert
+            Assert.Equal(90.0, result.High);
+            Assert.Equal(81.66, result.Average, 1);
+            Assert.Equal(70.0, result.Low);
+            Assert.Equal('B', result.Letter);
+        }
 
-  [Fact]
-  public void TestAddGrade()
-  {
-   var book = new InMemmoryBook("Grade Book");
-   book.AddGrade(100);
-   Assert.Equal(100, book.grades[0]);
-  }
- }
+        [Fact]
+        public void TestAddGrade()
+        {
+            var book = new InMemmoryBook("Grade Book");
+            book.AddGrade(100);
+            Assert.Equal(100, book.grades[0]);
+        }
+    }
 }
